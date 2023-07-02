@@ -14,7 +14,7 @@ Project for Edelweiss Global Markets Hackathon by Team GRASP
 - HTML
 - CSS
 - Python
-      - Django
+    - Django
 
 ## Team
 ### Members:
