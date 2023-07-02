@@ -9,11 +9,58 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <style>
+        img {
+            width: 200px;
+            height: 100px;
+            background-color: transparent;
+            border-radius: 50%;
+        }
+        
+        select {
+            width: 350px;
+            height: 50px;
+            border-radius: 50px;
+            margin-right: 12px;
+            margin-left: 12px;
+            color: red;
+        }
+        
+        .abc {
+            margin-right: 5em;
+        }
+        
+        .input-container {
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+        
+        option {
+            color: orange;
+        }
+        
+        #ab {
+            margin-right: 20px;
+        }
+        
+        #xy {
+            width: 300px;
+            margin-left: 0px;
+        }
+        
+        #aa {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="#page-top">GRASP</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="container"><img src="data:image/jpeg;base64,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">
+            <a class="navbar-brand" href="#page-top">OPTION CHAIN</a>
+            <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">OPTION CHAIN</a></li>
@@ -23,7 +70,52 @@
             </div>
         </div>
     </nav>
-    <header class="text-center text-white bg-primary masthead"></header>
+    <header class="text-center text-white bg-primary masthead">
+
+
+        <form action="/action_page.php">
+
+
+            <div class="input-container" id="aa">
+                <label for="field2">View Options Contracts for:</label>
+                <br>
+                <select name="contracts" id="contracts">
+                    
+                <option value="NIFTY">NIFTY</option>
+                <option value="FINIFTY">FINIFTY</option>
+                <option value="BANKNIFTY">BANKNIFTY</option>
+                <option value="MIDCPNIFTY">MIDCPNIFTY</option>
+            </select>
+            </div>
+            <div class="input-container">
+
+                <div class="input-container" id="xy">
+                    <label for="field2">Expiry Date</label>
+                    <br>
+                    <select name="cars" id="cars">
+                <option value="volvo"></option>
+                <option value="saab"></option>
+                <option value="opel"></option>
+                <option value="audi"></option>
+            </select>
+                </div>
+                <div class="input-container" id="xyz">
+                    <pre style="font-size:20px"><br>     OR</pre></div>
+                <div class="input-container" id="xy">
+                    <label for="field2">Strike Price</label>
+                    <br>
+                    <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+                </div>
+
+
+
+        </form>
+    </header>
     <section id="portfolio" class="portfolio"></section>
     <section id="about" class="text-center footer">
         <div class="container">
@@ -64,7 +156,8 @@
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
                                 <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cabin.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                    itaque. Nam.</p>
                             </div>
                         </div>
                     </div>
@@ -83,7 +176,8 @@
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
                                 <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cake.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                    itaque. Nam.</p>
                             </div>
                         </div>
                     </div>
@@ -102,7 +196,8 @@
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
                                 <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/circus.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                    itaque. Nam.</p>
                             </div>
                         </div>
                     </div>
@@ -121,7 +216,8 @@
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
                                 <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/game.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                    itaque. Nam.</p>
                             </div>
                         </div>
                     </div>
@@ -140,7 +236,8 @@
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
                                 <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/safe.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                    itaque. Nam.</p>
                             </div>
                         </div>
                     </div>
@@ -159,7 +256,8 @@
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
                                 <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/submarine.png">
-                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                    itaque. Nam.</p>
                             </div>
                         </div>
                     </div>
