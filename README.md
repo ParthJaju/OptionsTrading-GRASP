@@ -11,6 +11,10 @@ Project for Edelweiss Global Markets Hackathon by Team GRASP
 - Build an Options Chain tool given input.
 
 ## Technology Used
+- HTML
+- CSS
+- Python
+      - Django
 
 ## Team
 ### Members:
