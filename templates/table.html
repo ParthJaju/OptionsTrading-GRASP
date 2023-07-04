@@ -1,0 +1,67 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'custom.css' %}">
+    <section id="portfolio" class="portfolio">
+        <div class="table-container">
+        <table class="my-custom-table" id="my-custom-table-id">            <thead>
+        <tr>
+          <th colspan="10" class="calls-label">Calls</th>
+          <th colspan="1" class="strike-label">Strike</th>
+          <th colspan="10" class="puts-label">Puts</th>
+        </tr>
+        <tr>
+          <th class="calls-subcolumn">OI</th>
+          <th class="calls-subcolumn">CHNG IN OI</th>
+          <th class="calls-subcolumn">VOLUME</th>
+          <th class="calls-subcolumn">IV</th>
+          <th class="calls-subcolumn">LTP</th>
+          <th class="calls-subcolumn">CHNG</th>
+          <th class="calls-subcolumn">BID QTY</th>
+          <th class="calls-subcolumn">BID</th>
+          <th class="calls-subcolumn">ASK</th>
+          <th class="calls-subcolumn">ASK QTY</th>
+          <th class="strike-subcolumn"></th>
+          <th class="puts-subcolumn">BID QTY</th>
+          <th class="puts-subcolumn">BID</th>
+          <th class="puts-subcolumn">ASK</th>
+          <th class="puts-subcolumn">ASK QTY</th>
+          <th class="puts-subcolumn">CHNG</th>
+          <th class="puts-subcolumn">LTP</th>
+          <th class="puts-subcolumn">IV</th>
+          <th class="puts-subcolumn">VOLUME</th>
+          <th class="puts-subcolumn">CHNG IN OI</th>
+          <th class="puts-subcolumn">OI</th>
+        </tr>
+      </thead>
+
+      <tbody>
+          {% for price in option_prices %}
+                <tr>
+                  <td>{{ price.call.oi}}</td>
+                  <td></td>
+                  <td>{{price.call.volume}}</td>
+                  <td>-</td>
+                  <td>{{price.call.ltp}}</td>
+                  <td></td>
+                  <td>{{price.call.bid_qty}}</td>
+                  <td>{{price.call.bid_price}}</td>
+                  <td>{{price.call.ask_price}}</td>
+                  <td>{{price.call.ask_qty}}</td>
+                  <td id='stkpr'><b>{{price.strike}}</b></td>
+                  <td>{{price.put.bid_qty}}</td>
+                  <td>{{price.put.bid_price}}</td>
+                  <td>{{price.put.ask_price}}</td>
+                  <td>{{price.put.ask_qty}}</td>
+                  <td></td>
+                  <td>{{price.put.ltp}}</td>
+                  <td></td>
+                  <td>{{price.put.volume}}</td>
+                  <td></td>
+                  <td>{{price.put.oi}}</td>
+                </tr>
+          {% endfor %}
+      </tbody>
+
+    </table>
+        </div>
+    </section>

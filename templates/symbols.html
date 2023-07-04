@@ -1,0 +1,9 @@
+<div class="input-container" id="aa">
+    <label for="field2">View Options Contracts for:</label>
+    <br>
+    <select name="contracts" id="contracts">
+    {% for symbol in symbols %}
+        <option value="{{ symbol }}">{{ symbol }}</option>
+    {% endfor %}
+    </select>
+</div>
