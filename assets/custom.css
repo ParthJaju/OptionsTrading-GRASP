@@ -1,0 +1,67 @@
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+  
+  .my-custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; 
+    height: 300px; 
+  
+  }
+  
+  .my-custom-table th,
+  .my-custom-table td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+  
+
+  label{
+    color: black;
+  }
+  
+  .calls-label {
+    background-color: #0abb92; /* Calls column label color */
+    color: rgb(253, 253, 253);
+    text-align: center;
+  }
+  
+  .puts-label {
+    background-color: #d55438; /* Puts column label color */
+    color: white;
+    text-align: center;
+  }
+  
+  .calls-subcolumn {
+    background-color: #9cdccd; /* Calls subcolumn color */
+    color: black;
+  }
+  
+  .puts-subcolumn {
+    background-color: #d4816e; /* Puts subcolumn color */
+    color: black;
+  }
+  .strike-subcolumn {
+    background-color: #fafafa; /* Puts subcolumn color */
+    color: black;
+  }
+  .strike-subcolumn {
+    background-color: #fafafa; /* Puts subcolumn color */
+    color: rgb(0, 0, 0);
+  }
+  th.strike-label{
+    color: rgb(0, 0, 0);
+
+  }
+  strike-label{
+    color: rgb(0, 0, 0);
+
+  }
+ 
+  #stkpr{
+      color: red;
+  }
